@@ -1,142 +1,153 @@
-# Hello there! <img src="https://raw.githubusercontent.com/aemmadi/aemmadi/master/wave.gif" width="30">
+CT-to-MRI Image Translation using Deep Learning
+Overview
 
-I’m **Ahmed Ismail**, a **Machine Learning Engineer** focused on building intelligent systems using **Deep Learning, Computer Vision, and Applied AI**.
+This project focuses on translating medical images from Computed Tomography (CT) to Magnetic Resonance Imaging (MRI) using deep learning techniques from Computer Vision and Deep Learning.
 
-I enjoy transforming raw data into **practical AI solutions**, designing models, optimizing pipelines, and deploying machine learning systems for real-world applications.
+Medical imaging modalities such as CT and MRI provide complementary diagnostic information. However, MRI scans can be expensive, time-consuming, and less accessible in some clinical settings.
 
-My work mainly focuses on:
+The goal of this project is to develop a deep learning model capable of generating synthetic MRI images from CT scans, which may help support medical analysis when MRI is unavailable.
 
-* Computer Vision
-* Medical AI
-* Deep Learning Systems
-* Machine Learning Pipelines
-* Applied AI Research
+Project Objectives
 
-Always open to collaboration on **AI, Machine Learning, and Data projects**.
+Build a model to translate CT scans into MRI images
 
----
+Learn cross-modality relationships between CT and MRI
 
-# 🌐 Connect With Me
+Evaluate generated MRI images using image similarity metrics
 
-[![Linkedin Badge](https://img.shields.io/badge/-Ahmed%20Ismail-blue?style=flat-square\&logo=Linkedin\&logoColor=white\&link=https://www.linkedin.com/in/ahmed-ismail-848746295/)](https://www.linkedin.com/in/ahmed-ismail-848746295/)
+Explore the application of image-to-image translation models
 
-[![YouTube Badge](https://img.shields.io/badge/-YouTube-red?style=flat-square\&logo=youtube\&logoColor=white\&link=https://www.youtube.com/@Evil_0_tech)](https://www.youtube.com/@Evil_0_tech)
+Dataset
 
-[![TikTok Badge](https://img.shields.io/badge/-TikTok-black?style=flat-square\&logo=tiktok)](https://www.tiktok.com/@evil_0_code)
+The dataset used in this project contains:
 
-[![Instagram Badge](https://img.shields.io/badge/-Instagram-purple?style=flat-square\&logo=instagram)](https://www.instagram.com/evil_0_code)
+18 patients
 
----
+Each patient includes:
 
-# ⚡ Core Focus
+CT scans
 
-* 🧠 Machine Learning
-* 👁️ Computer Vision
-* 🏥 Medical Image Analysis
-* 📊 Data Analysis
-* 🚀 Model Optimization & Deployment
+MRI T1 scans
 
----
+MRI T2 scans
 
-# ⚡ Tech Stack
+These images correspond to the same patient, allowing supervised training between CT and MRI modalities.
 
-### 🧠 Machine Learning & AI
+Medical images are commonly stored in formats such as:
 
-![Python](https://img.shields.io/badge/-Python-black?style=flat-square\&logo=python)
-![TensorFlow](https://img.shields.io/badge/-TensorFlow-black?style=flat-square\&logo=tensorflow)
-![PyTorch](https://img.shields.io/badge/-PyTorch-black?style=flat-square\&logo=pytorch)
-![Scikit-Learn](https://img.shields.io/badge/-ScikitLearn-black?style=flat-square\&logo=scikit-learn)
+DICOM
 
----
+NIfTI
 
-### 👁️ Computer Vision
+Methodology
 
-![OpenCV](https://img.shields.io/badge/-OpenCV-black?style=flat-square\&logo=opencv)
-![CNN](https://img.shields.io/badge/-CNN-black?style=flat-square)
-![Transfer Learning](https://img.shields.io/badge/-TransferLearning-black?style=flat-square)
+The project follows a typical medical imaging pipeline:
 
----
+1. Data Preprocessing
 
-### 📊 Data Science
+Load medical images
 
-![NumPy](https://img.shields.io/badge/-NumPy-black?style=flat-square\&logo=numpy)
-![Pandas](https://img.shields.io/badge/-Pandas-black?style=flat-square\&logo=pandas)
-![Matplotlib](https://img.shields.io/badge/-Matplotlib-black?style=flat-square)
+Slice extraction from 3D volumes
 
----
+Image normalization
 
-### 🛠️ Tools
+Alignment between CT and MRI images
 
-![Git](https://img.shields.io/badge/-Git-black?style=flat-square\&logo=git)
-![GitHub](https://img.shields.io/badge/-GitHub-black?style=flat-square\&logo=github)
-![Linux](https://img.shields.io/badge/-Linux-black?style=flat-square\&logo=linux)
-![SQL](https://img.shields.io/badge/-SQL-black?style=flat-square)
+Libraries used for handling medical images include:
 
----
+pydicom
 
-# 🚀 Featured Projects
+NiBabel
 
-## 🌿 Plant Disease Detection (CNN)
+SimpleITK
 
-Deep learning model for detecting plant diseases using **Convolutional Neural Networks and Transfer Learning**.
+2. Model Architecture
 
-Main features:
+The project uses image-to-image translation models such as:
 
-* Image preprocessing
-* CNN architecture
-* Model evaluation
+Pix2Pix
 
-Repository:
-https://github.com/A28-Cs/Tree-Clinic
+CycleGAN
 
----
+These models are widely used for cross-modality medical image translation.
 
-## 🏥 CT → MRI Image Translation
+3. Training
 
-Medical AI project that converts **CT scans into synthetic MRI images** using **image-to-image translation models**.
+The models are trained using deep learning frameworks such as:
 
-Focus areas:
+PyTorch
+or
 
-* medical image preprocessing
-* deep learning for medical imaging
-* generative models
+TensorFlow
 
----
+Training includes:
 
-## 🎯 Object Detection System
+CT images as input
 
-Computer vision system capable of detecting objects in images and videos using deep learning pipelines.
+MRI images as target output
 
----
+Adversarial and reconstruction loss functions
 
-# 📊 GitHub Statistics
+Evaluation Metrics
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=A28-Cs\&show_icons=true\&theme=tokyonight)
+Generated MRI images are evaluated using common image quality metrics:
 
----
+Structural Similarity Index
 
-# 🔥 GitHub Streak
+Peak Signal-to-Noise Ratio
 
-![GitHub Streak](https://streak-stats.demolab.com?user=A28-Cs\&theme=tokyonight)
+Mean Squared Error (MSE)
 
----
+These metrics measure similarity between generated MRI images and real MRI scans.
 
-# 📈 Most Used Languages
+Technologies Used
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=A28-Cs\&layout=compact\&theme=tokyonight)
+Python
 
----
+NumPy
 
-# 🏆 GitHub Trophies
+OpenCV
 
-![trophy]([https://github-profile-trophy.vercel.app/?username=A28-Cs\&theme=onedark](https://ahmed-ismail-portfolio-pied.vercel.app/))
+PyTorch / TensorFlow
+CT-to-MRI-Translation
+│
+├── data
+│   ├── CT
+│   ├── MRI_T1
+│   └── MRI_T2
+│
+├── preprocessing
+│   └── data_preprocessing.py
+│
+├── models
+│   ├── pix2pix_model.py
+│   └── cyclegan_model.py
+│
+├── training
+│   └── train.py
+│
+├── evaluation
+│   └── metrics.py
+│
+├── results
+│   └── generated_images
+│
+└── README.md
 
----
+Future Work
 
-# 👀 Profile Visitors
+Increase dataset size
 
-![Visitor Count](https://komarev.com/ghpvc/?username=A28-Cs)
+Improve image registration
 
----
+Train on 3D medical volumes
 
-⭐ *Building AI systems, exploring new ideas, and pushing the boundaries of Machine Learning.*
+Apply models for clinical decision support
+
+Disclaimer
+
+This project is intended for research and educational purposes only.
+The generated MRI images are not intended for clinical diagnosis without medical validation.
+Medical imaging libraries
+
+GPU acceleration
